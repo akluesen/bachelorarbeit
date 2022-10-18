@@ -9,8 +9,6 @@ client_id = 'mqttx_d0c12617'
 username = 'aklues'
 password = 'lRTQxtXHjLTdNT9RcI8b3FH2o6cOH3dm'
 
-
-
 #!/usr/bin/env python
 # -*- coding: utf8 -*-
 
