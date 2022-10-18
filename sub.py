@@ -32,12 +32,13 @@ def subscribe(client: mqtt_client):
     def on_message(client, userdata, msg):
         json_data = msg.payload.decode()
         length_str = len(msg.payload.decode()) - 1
-        datei = open('textdatei.json','a')
+        datei = open('links_anomalie_sensor2.json','a')
         datei.write(str(msg.payload.decode())[1:length_str] + ",")
         datei.write("\n")
         print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
     client.subscribe(topic, qos=0)
     client.on_message = on_message
+
 
 
 def run():
@@ -47,7 +48,6 @@ def run():
 
 if __name__ == '__main__':
     run()
-    
     
     
     
